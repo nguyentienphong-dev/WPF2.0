@@ -1,0 +1,4 @@
+tanulo1;5;5;9.A
+Nagy Bence;asd2;6;9.A
+ta2;asd3;7;11.B
+Fehér Attila;asd4;8;11.B

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WPF2._0.TanarTanuloControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF2._0"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <GroupBox Grid.Row="1" Header="Statisztika" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="10" Margin="0,20,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Button x:Name="aJegyBeírásButton" Content="Jegy Beírás" Width="90" Margin="0,0,0,10" Click="JegyBeirasButton_Click"/>
+                        <Button x:Name="aJegyTörlésButton" Content="Jegy Törlés" Width="90" Margin="0,0,0,10" Click="JegyTorlesButton_Click"/>
+                        <Button x:Name="afrissitesButton" Content="frissites" Width="90" Margin="0,0,0,10" Click="JegyfrissitesButton_Click"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Label Content="Név:"/>
+                            <Label Content="Átlag:"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBox x:Name="nev" Width="100" HorizontalAlignment="Center" IsReadOnly="True" Margin="0,0,0,8"/>
+                            <TextBox x:Name="atlag" Width="100" HorizontalAlignment="Center" IsReadOnly="True"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <DataGrid x:Name="aUserDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Tantárgy" Binding="{Binding Tantargy}" Width="*"/>
+                            <DataGridTextColumn Header="Jegy" Binding="{Binding Ertek}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

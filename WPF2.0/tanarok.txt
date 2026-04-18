@@ -1,0 +1,2 @@
+a;a;3;Fasztan
+Kovács Péter;0333;4;Matematika
